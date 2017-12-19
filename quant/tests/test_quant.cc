@@ -1,4 +1,4 @@
-#include "../quant.h"
+#include "../include/quant.h"
 
 #include <stdio.h>
 #include <stdlib.h>
