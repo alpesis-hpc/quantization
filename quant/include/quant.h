@@ -10,7 +10,7 @@
 #define QUANT_H
 
 #include <cmath>
-
+#include <stdio.h>
 
 /*
  */
@@ -30,10 +30,10 @@ void fix_bits (dtype * data, const int n, unsigned int bitwidth, unsigned bitwid
 
 
 template <typename dtype>
-void fix_dynamic (dtype * data, const int n)
+void fix_dynamic (dtype * data, const int n, unsigned int bitwidth)
 {
-	for (int i = 0; i < n; ++i)
-		data[i] = (int)ceil(log2(data[i]));
+	int bitwidth_fraction = (int)ceil(log2(bitwidth));
+	printf("%d \n", bitwidth_fraction);
 }
 
 

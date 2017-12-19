@@ -32,7 +32,8 @@ void test_fix_bits(dtype * data, unsigned int n)
 template <typename dtype>
 void test_fix_dynamic(dtype * data, unsigned int n)
 {
-	fix_dynamic(data, n);
+	unsigned int bitwidth = 16;
+	fix_dynamic(data, n, bitwidth);
 	printf("data (fixed: dynamic): "); data_print(data, n);
 }
 
